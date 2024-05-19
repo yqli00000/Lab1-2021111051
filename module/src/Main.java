@@ -226,6 +226,7 @@ public class Main {
                         System.out.println("this is a test for git B1");
                         return;
                     default:
+                        System.out.println("this is a test for B2");
                         break;
                 }
             }
