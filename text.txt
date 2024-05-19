@@ -24,5 +24,5 @@ So put on a smile,
 You'll live through your pain.
 this is a test for B2
 Know it will pass,
-this is a test for git B1
+this is a test for git B1 merged
 And strength you will gain
