@@ -223,7 +223,7 @@ public class Main {
                         break;
                     case 8:
                         System.out.println("this is a test for git!");
-                        System.out.println("this is a test for git B1");
+                        System.out.println("this is a test for git B1 merge");
                         return;
                     default:
                         break;
