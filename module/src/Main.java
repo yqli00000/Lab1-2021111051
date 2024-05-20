@@ -559,7 +559,7 @@ public class Main {
     }
     private static volatile boolean stopRequested = false;
     public static String randomWalk() throws IOException {
-        MyThread thread = new MyThread();
+        Thread thread = new Thread();
         thread.start();
         StringBuilder walkOutput = new StringBuilder(); // 用于存储遍历的节点
         Random random = new Random();
@@ -689,15 +689,6 @@ class type {
         Edge(String destination, int weight) {
             this.destination = destination;
             this.weight = weight;
-        }
-    }
-}
-class MyThread extends Thread {
-    public void run() {
-        try {
-            Thread.sleep(5000); // 休眠 5 秒
-        } catch (InterruptedException e) {
-            e.printStackTrace();
         }
     }
 }
