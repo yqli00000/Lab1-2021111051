@@ -20,6 +20,10 @@ public class Main {
                 Scanner scan = new Scanner(System.in);
 
                 System.out.println("请输入所选择的序号：");
+                if (!scan.hasNextInt()) {
+                    System.out.println("输入无效，请输入一个整数。");
+                    continue;
+                }
                 int n = scan.nextInt();
                 switch (n) {
                     case 1:
@@ -557,7 +561,7 @@ public class Main {
             e.printStackTrace();
         }
     }
-    private static volatile boolean stopRequested = false;
+
     public static String randomWalk() throws IOException {
         Thread thread = new Thread();
         thread.start();
@@ -572,7 +576,7 @@ public class Main {
         List<String> vertices = new ArrayList<>(graph.getAdjacencyList().keySet());
         String currentNode = vertices.get(random.nextInt(vertices.size()));
 
-        while (!stopRequested) {
+        while (true) {
             walkOutput.append(currentNode).append(" -> "); // 记录经过的节点
 
             List<type.Edge> edges = graph.getAdjacencyList().get(currentNode);
