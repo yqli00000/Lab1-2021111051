@@ -388,9 +388,8 @@ public class Main {
             } else if (listBridgeWords.size() > 1) {
 
               //  Random random = new Random();
-              SecureRandom random = new SecureRandom();
+              int randomIndex = new SecureRandom().nextInt(listBridgeWords.size());
               // 生成一个随机索引，范围是 [0, list.size())
-              int randomIndex = random.nextInt(listBridgeWords.size());
 
               // 使用随机索引从List中获取随机元素
               String randomElement = listBridgeWords.get(randomIndex);
