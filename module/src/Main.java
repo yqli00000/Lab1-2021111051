@@ -24,6 +24,7 @@ import java.util.regex.Pattern;
  */
 public class Main {
   private static Type graph;
+  private static SecureRandom random = new SecureRandom();
   /**
    * 这是主函数类.
    */
@@ -388,7 +389,7 @@ public class Main {
             } else if (listBridgeWords.size() > 1) {
 
               //  Random random = new Random();
-              int randomIndex = new SecureRandom().nextInt(listBridgeWords.size());
+              int randomIndex = random.nextInt(listBridgeWords.size());
               // 生成一个随机索引，范围是 [0, list.size())
 
               // 使用随机索引从List中获取随机元素
