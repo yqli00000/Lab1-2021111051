@@ -332,7 +332,9 @@ public class Main {
       process.waitFor();
 
       // 输出命令执行结果
-      BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+      //BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+      BufferedReader reader = new BufferedReader(
+          new InputStreamReader(process.getInputStream(), "UTF-8"));
       String line;
       while ((line = reader.readLine()) != null) {
         System.out.println(line);
