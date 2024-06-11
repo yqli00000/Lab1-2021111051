@@ -1,5 +1,6 @@
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
@@ -441,7 +442,7 @@ public class Main {
     int mmaxValue = 100000;
     int numVertex = graph.getVertexCount();
     //        System.out.println(vertex);
-    int numEdge = graph.getEdgeCount();
+    //int numEdge = graph.getEdgeCount();
     //        System.out.println("Vertex count: " + graph.getVertexCount());
     //        System.out.println("Edge count: " + graph.getEdgeCount());
     //映射
@@ -571,7 +572,9 @@ public class Main {
           String.format("./output/output_shortPath_%s_%s.png", word, destinationD);
       // 读取原始 DOT 文件内容
       File file = new File(dotFilePath);
-      BufferedReader reader = new BufferedReader(new FileReader(file));
+      //BufferedReader reader = new BufferedReader(new FileReader(file));
+      BufferedReader reader = new BufferedReader(
+          new InputStreamReader(new FileInputStream(file), StandardCharsets.UTF_8));
       StringBuilder dotContent = new StringBuilder();
       String line;
       while ((line = reader.readLine()) != null) {
@@ -599,9 +602,15 @@ public class Main {
 
       // 将修改后的 DOT 内容写入临时文件
       File tempDotFile = new File("temp.dot");
-      FileWriter writer = new FileWriter(tempDotFile);
-      writer.write(dotContent.toString());
-      writer.close();
+      FileOutputStream fileOutputStream = new FileOutputStream(tempDotFile);
+      try (OutputStreamWriter outputStreamWriter = new OutputStreamWriter(
+          fileOutputStream, StandardCharsets.UTF_8)) {
+        outputStreamWriter.write(dotContent.toString());
+        //writer.write(dotContent.toString());
+        //writer.close();
+      } catch (IOException e) {
+        // 处理异常
+      }
 
       // 调用 Graphviz 生成图片
       showDirectedGraph("temp.dot", outputImagePath);
@@ -664,9 +673,9 @@ public class Main {
 
       // 检查是否有键盘输入
       if (System.in.available() > 0) {
-        Scanner scanner = new Scanner(
-            new InputStreamReader(System.in, StandardCharsets.UTF_8));
-        String input = scanner.nextLine();
+        //Scanner scanner = new Scanner(
+        //    new InputStreamReader(System.in, StandardCharsets.UTF_8));
+        //String input = scanner.nextLine();
         // 输出当前已经遍历的路径
         System.out.println("遍历已停止. 当前路径：" + walkOutput.toString());
         break;
