@@ -1,11 +1,15 @@
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
+import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -37,7 +41,7 @@ public class Main {
         System.out.println("--             7. 随机游走                        --");
         System.out.println("--             8. 退出程序                        --");
         System.out.println("--------------------------------------------------");
-        Scanner scan = new Scanner(System.in);
+        Scanner scan = new Scanner(new InputStreamReader(System.in, StandardCharsets.UTF_8));
 
         System.out.println("请输入所选择的序号：");
         if (!scan.hasNextInt()) {
@@ -49,7 +53,7 @@ public class Main {
           case 1:
             final long startTime = System.nanoTime();
             File file = new File("text.txt");
-            Scanner scanner = new Scanner(file);
+            Scanner scanner = new Scanner(file, StandardCharsets.UTF_8.name());
 
             StringBuilder processedText = new StringBuilder();
             Map<String, Integer> wordCount = new HashMap<>();
@@ -119,7 +123,8 @@ public class Main {
               break;
             }
             System.out.println("请输入两个英文单词，以空格分隔：");
-            Scanner scanInput = new Scanner(System.in);
+            Scanner scanInput = new Scanner(
+                new InputStreamReader(System.in, StandardCharsets.UTF_8));
             String wordInput = scanInput.nextLine();
             String[] words = wordInput.split(" ");
             if (words.length != 2) {
@@ -151,7 +156,8 @@ public class Main {
               break;
             }
             System.out.println("请输入一行新的文本：");
-            Scanner newText = new Scanner(System.in);
+            Scanner newText = new Scanner(
+                new InputStreamReader(System.in, StandardCharsets.UTF_8));
             String inputText = newText.nextLine();
             long startTime4 = System.nanoTime();
             String outputText = generateNewText(inputText);
@@ -169,7 +175,9 @@ public class Main {
               break;
             }
             System.out.println("请输入两个英文单词，以空格分隔：");
-            Scanner scanInput2 = new Scanner(System.in);
+            //Scanner scanInput2 = new Scanner(System.in);
+            Scanner scanInput2 = new Scanner(
+                new InputStreamReader(System.in, StandardCharsets.UTF_8));
             String wordInput2 = scanInput2.nextLine();
             String[] words2 = wordInput2.split(" ");
             if (words2.length != 2) {
@@ -200,7 +208,8 @@ public class Main {
               break;
             }
             System.out.println("请输入一个单词：");
-            Scanner scanInput3 = new Scanner(System.in);
+            Scanner scanInput3 = new Scanner(
+                new InputStreamReader(System.in, StandardCharsets.UTF_8));
             String word3 = scanInput3.nextLine();
 
             String inputWord1 = word3.toLowerCase();
@@ -221,7 +230,8 @@ public class Main {
             long startTime7 = System.nanoTime();
             String walkOutput = randomWalk();
             String outputFilePath = "random_walk_output.txt";
-            try (FileWriter writer = new FileWriter(outputFilePath, true)) {
+            try (OutputStreamWriter writer = new OutputStreamWriter(
+                new FileOutputStream(outputFilePath, true), StandardCharsets.UTF_8)) {
               writer.append(walkOutput);
               //                 writer.append(System.lineSeparator()); // 添加换行符
               System.out.println("Random walk output saved to " + outputFilePath);
@@ -255,10 +265,8 @@ public class Main {
    */
 
   public static void saveGraphToFile(Type graph) {
-    try {
-      File file = new File("graph.dot"); // 保存为.dot文件
-      PrintWriter writer = new PrintWriter(file);
-
+    try (PrintWriter writer = new PrintWriter(new OutputStreamWriter(
+        new FileOutputStream("graph.dot"), StandardCharsets.UTF_8))) {
       // 写入DOT文件头部信息
       writer.println("digraph G {");
 
@@ -273,9 +281,8 @@ public class Main {
       // 写入DOT文件尾部信息
       writer.println("}");
 
-      writer.close();
       System.out.println("Graph saved to graph.dot");
-    } catch (FileNotFoundException e) {
+    } catch (IOException e) {
       System.out.println("Failed to save graph to file.");
       e.printStackTrace();
     }
@@ -643,7 +650,8 @@ public class Main {
 
       // 检查是否有键盘输入
       if (System.in.available() > 0) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(
+            new InputStreamReader(System.in, StandardCharsets.UTF_8));
         String input = scanner.nextLine();
         // 输出当前已经遍历的路径
         System.out.println("遍历已停止. 当前路径：" + walkOutput.toString());
