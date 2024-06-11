@@ -196,7 +196,7 @@ public class Main {
 
             if (outcome == null) {
               System.out.println("有不属于该图的结点！");
-            } else if (outcome == "") {
+            } else if (outcome.equals("")) {
               System.out.println("这两个单词不可达！");
             } else {
               System.out.println(outcome);
@@ -330,15 +330,23 @@ public class Main {
 
       // 等待命令执行完成
       process.waitFor();
-
+      try (BufferedReader reader = new BufferedReader(
+          new InputStreamReader(process.getInputStream(), "UTF-8"))) {
+        String line;
+        while ((line = reader.readLine()) != null) {
+          System.out.println(line);
+        }
+      } catch (IOException e) {
+        // 处理异常
+      }
       // 输出命令执行结果
       //BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-      BufferedReader reader = new BufferedReader(
-          new InputStreamReader(process.getInputStream(), "UTF-8"));
-      String line;
-      while ((line = reader.readLine()) != null) {
-        System.out.println(line);
-      }
+      //      BufferedReader reader = new BufferedReader(
+      //          new InputStreamReader(process.getInputStream(), "UTF-8"));
+      //      String line;
+      //      while ((line = reader.readLine()) != null) {
+      //        System.out.println(line);
+      //      }
 
       // 检查命令执行是否出错
       int exitValue = process.exitValue();
@@ -419,8 +427,8 @@ public class Main {
    */
 
   public static String calcShortestPath(String word1, String word2) {
-    String s = new String();
-    if (word2 == "#") {
+    String s = "";
+    if (word2.equals("#")) {
       if (!graph.getAdjacencyList().containsKey(word1)) {
         return null;
       }
@@ -483,7 +491,7 @@ public class Main {
     //初始化输出路径
     for (int i = 0; i < matrix.length; i++) {
       String word = reverseStringMapping.get(i);
-      path[i] = new String(word1 + "->" + word);
+      path[i] = word1 + "->" + word;
     }
 
     //初始化源节点
@@ -517,7 +525,7 @@ public class Main {
       }
 
     }
-    if (word2 == "#") {
+    if (word2.equals("#")) {
       //打印最短路径
       //int count = 1;
       for (int i = 0; i < matrix.length; i++) {
@@ -599,7 +607,11 @@ public class Main {
       showDirectedGraph("temp.dot", outputImagePath);
 
       // 删除临时 DOT 文件
-      tempDotFile.delete();
+      // tempDotFile.delete();
+      if (!tempDotFile.delete()) {
+        System.err.println("无法删除临时文件：" + tempDotFile.getAbsolutePath());
+        // 可以添加进一步的处理逻辑，比如记录日志或者尝试其他操作
+      }
     } catch (IOException e) {
       e.printStackTrace();
     }

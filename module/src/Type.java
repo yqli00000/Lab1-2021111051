@@ -57,7 +57,7 @@ public class Type {
    */
 
   public Map<String, List<Edge>> getAdjacencyList() {
-    return adjacencyList;
+    return new HashMap<>(adjacencyList);
   }
   /**
    * 顶点数.
@@ -97,7 +97,7 @@ public class Type {
    */
 
   // 内部类表示边
-  public class Edge {
+  static class Edge {
     String destination;
     int weight;
 
