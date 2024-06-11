@@ -309,12 +309,14 @@ public class Main {
    */
 
   public static void showDirectedGraph(String dotFilePath, String outputImagePath) {
+
     try {
       //            // 构建Graphviz命令
-      String[] cmd = {"dot", "-Tpng", dotFilePath, "-o", outputImagePath};
+      //      String[] cmd = {"dot", "-Tpng", dotFilePath, "-o", outputImagePath};
 
       // 执行命令
-      ProcessBuilder pb = new ProcessBuilder(cmd);
+      //      ProcessBuilder pb = new ProcessBuilder(cmd);
+      ProcessBuilder pb = new ProcessBuilder("dot", "-Tpng", dotFilePath, "-o", outputImagePath);
       pb.redirectErrorStream(true);
       Process process = pb.start();
 
@@ -378,9 +380,8 @@ public class Main {
               }
             } else if (listBridgeWords.size() > 1) {
 
-              // 创建一个Random对象
-              Random random = new Random();
-
+              //  Random random = new Random();
+              SecureRandom random = new SecureRandom();
               // 生成一个随机索引，范围是 [0, list.size())
               int randomIndex = random.nextInt(listBridgeWords.size());
 
@@ -602,8 +603,8 @@ public class Main {
     Thread thread = new Thread();
     thread.start();
     StringBuilder walkOutput = new StringBuilder(); // 用于存储遍历的节点
-    Random random = new Random();
-
+    //    Random random = new Random();
+    SecureRandom random = new SecureRandom();
     if (graph == null || graph.getAdjacencyList().isEmpty()) {
       return "Graph为空";
     }
