@@ -5,21 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97d90ede-3f26-4028-88a6-f54d3c68758e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/module/src/queryBridgeWordsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/checkstyleidea-libs/readme.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/findbugs-idea.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/hamcrest_core_1_3_javadoc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_13_2_javadoc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_13_2_javadoc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LAB1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/LAB1.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module/src/calcShortestPathTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/module/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module/type$Edge.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/module/type.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/src/queryBridgeWordsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAB1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAB1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAB1/classpath.index" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAB1/classpath.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAB1/queryBridgeWordsTest.class" beforeDir="false" />
     </list>
     <list id="3988570c-fd5c-42e7-b298-5d90698b076d" name="Changes by XYX" comment="">
       <change beforePath="$PROJECT_DIR$/module/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/module/src/Main.java" afterDir="false" />
@@ -42,13 +35,16 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/module/src/Main.java">
       <ranges>
-        <range start1="33" end1="33" start2="33" end2="34" changelist="97d90ede-3f26-4028-88a6-f54d3c68758e" />
-        <range start1="50" end1="50" start2="51" end2="52" changelist="97d90ede-3f26-4028-88a6-f54d3c68758e" />
-        <range start1="53" end1="53" start2="55" end2="56" changelist="97d90ede-3f26-4028-88a6-f54d3c68758e" />
-        <range start1="121" end1="122" start2="124" end2="159" changelist="97d90ede-3f26-4028-88a6-f54d3c68758e" />
-        <range start1="127" end1="127" start2="164" end2="165" changelist="3988570c-fd5c-42e7-b298-5d90698b076d" />
-        <range start1="154" end1="154" start2="192" end2="193" changelist="97d90ede-3f26-4028-88a6-f54d3c68758e" />
-        <range start1="558" end1="559" start2="597" end2="598" changelist="97d90ede-3f26-4028-88a6-f54d3c68758e" />
+        <range start1="33" end1="33" start2="33" end2="34" changelist="3988570c-fd5c-42e7-b298-5d90698b076d" />
+        <range start1="55" end1="56" start2="56" end2="57" changelist="97d90ede-3f26-4028-88a6-f54d3c68758e" />
+        <range start1="125" end1="159" start2="126" end2="126" changelist="97d90ede-3f26-4028-88a6-f54d3c68758e" />
+        <range start1="213" end1="216" start2="180" end2="205" changelist="97d90ede-3f26-4028-88a6-f54d3c68758e" />
+        <range start1="217" end1="217" start2="206" end2="214" changelist="97d90ede-3f26-4028-88a6-f54d3c68758e" />
+        <range start1="218" end1="222" start2="215" end2="216" changelist="97d90ede-3f26-4028-88a6-f54d3c68758e" />
+        <range start1="225" end1="226" start2="219" end2="220" changelist="97d90ede-3f26-4028-88a6-f54d3c68758e" />
+        <range start1="229" end1="230" start2="223" end2="223" changelist="97d90ede-3f26-4028-88a6-f54d3c68758e" />
+        <range start1="231" end1="235" start2="224" end2="224" changelist="97d90ede-3f26-4028-88a6-f54d3c68758e" />
+        <range start1="243" end1="245" start2="232" end2="233" changelist="97d90ede-3f26-4028-88a6-f54d3c68758e" />
       </ranges>
     </file>
   </component>
@@ -68,73 +64,74 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
-    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/文档user/Tencent Files/747082093/FileRecv/软件工程/实验一/LAB1&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/文档user/Tencent Files/747082093/FileRecv/软件工程/实验三/LAB3",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RunManager" selected="JUnit.queryBridgeWordsTest.testCase1ThenCase3WithValidInput">
-    <configuration name="queryBridgeWordsTest.testCase1ThenCase3WithValidInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+}]]></component>
+  <component name="RunManager">
+    <configuration name="calcShortestPathTest.testCase1ThenCase3WithValidInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LAB1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="queryBridgeWordsTest" />
+      <option name="MAIN_CLASS_NAME" value="calcShortestPathTest" />
       <option name="METHOD_NAME" value="testCase1ThenCase3WithValidInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="queryBridgeWordsTest.testInvalidInputFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="calcShortestPathTest.testCase5WithValidInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LAB1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="queryBridgeWordsTest" />
+      <option name="MAIN_CLASS_NAME" value="calcShortestPathTest" />
+      <option name="METHOD_NAME" value="testCase5WithValidInput" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="calcShortestPathTest.testInvalidInputFormat" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="LAB1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="calcShortestPathTest" />
       <option name="METHOD_NAME" value="testInvalidInputFormat" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="queryBridgeWordsTest.testInvalidInputOneWord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="calcShortestPathTest.testInvalidInputOneWord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LAB1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="queryBridgeWordsTest" />
+      <option name="MAIN_CLASS_NAME" value="calcShortestPathTest" />
       <option name="METHOD_NAME" value="testInvalidInputOneWord" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="queryBridgeWordsTest.testInvalidInputThreeWords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="calcShortestPathTest.testInvalidInputThreeWords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LAB1" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="queryBridgeWordsTest" />
+      <option name="MAIN_CLASS_NAME" value="calcShortestPathTest" />
       <option name="METHOD_NAME" value="testInvalidInputThreeWords" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="queryBridgeWordsTest.testValidInputTwoWords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LAB1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="queryBridgeWordsTest" />
-      <option name="METHOD_NAME" value="testValidInputTwoWords" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -142,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.queryBridgeWordsTest.testCase1ThenCase3WithValidInput" />
-        <item itemvalue="JUnit.queryBridgeWordsTest.testInvalidInputFormat" />
-        <item itemvalue="JUnit.queryBridgeWordsTest.testInvalidInputThreeWords" />
-        <item itemvalue="JUnit.queryBridgeWordsTest.testInvalidInputOneWord" />
-        <item itemvalue="JUnit.queryBridgeWordsTest.testValidInputTwoWords" />
+        <item itemvalue="JUnit.calcShortestPathTest.testCase5WithValidInput" />
+        <item itemvalue="JUnit.calcShortestPathTest.testCase1ThenCase3WithValidInput" />
+        <item itemvalue="JUnit.calcShortestPathTest.testInvalidInputFormat" />
+        <item itemvalue="JUnit.calcShortestPathTest.testInvalidInputThreeWords" />
+        <item itemvalue="JUnit.calcShortestPathTest.testInvalidInputOneWord" />
       </list>
     </recent_temporary>
   </component>
@@ -160,7 +157,7 @@
       <updated>1718088955693</updated>
       <workItem from="1718088956808" duration="2189000" />
       <workItem from="1718156546507" duration="7419000" />
-      <workItem from="1718286151024" duration="6197000" />
+      <workItem from="1718286151024" duration="18083000" />
     </task>
     <servers />
   </component>
@@ -172,42 +169,22 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/module/src/Main.java</url>
-          <line>167</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/module/src/Main.java</url>
-          <line>126</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/module/src/Main.java</url>
-          <line>165</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/module/src/Main.java</url>
-          <line>166</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/module/src/Main.java</url>
-          <line>48</line>
+          <line>49</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/module/src/Main.java</url>
-          <line>49</line>
+          <line>50</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/module/src/Main.java</url>
-          <line>54</line>
+          <line>55</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/module/src/Main.java</url>
-          <line>60</line>
+          <line>61</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>

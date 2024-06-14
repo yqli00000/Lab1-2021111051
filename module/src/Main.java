@@ -32,6 +32,7 @@ public class Main {
 
   public static void main(String[] args) {
 
+
     try {
       while (true) {
         System.out.println("--------------------------------------------------");
@@ -53,7 +54,7 @@ public class Main {
           continue;
         }
         int n = scan.nextInt();
-//        scan.nextLine();
+        scan.nextLine();
         switch (n) {
           case 1:
             final long startTime = System.nanoTime();
@@ -123,40 +124,6 @@ public class Main {
             System.out.println("执行时间: " + (duration2 / 1_000_000.0) + " 毫秒");
             break;
           case 3:{
-            File file1 = new File("text.txt");
-            Scanner scanner1 = new Scanner(file1, StandardCharsets.UTF_8.name());
-
-            StringBuilder processedText1 = new StringBuilder();
-            Map<String, Integer> wordCount1 = new HashMap<>();
-
-            String prevWord1 = null;
-
-            while (scanner1.hasNextLine()) {
-              String line = scanner1.nextLine();
-              String[] words = line.split("[^a-zA-Z]"); // 使用正则表达式分割单词
-
-              for (String word : words) {
-                if (!word.isEmpty()) {
-                  String normalizedWord = word.toLowerCase();
-                  processedText1.append(normalizedWord).append(" "); // 转换为小写并添加空格
-
-                  if (prevWord1 != null) {
-                    String edge = prevWord1 + "-" + normalizedWord;
-                    wordCount1.put(edge, wordCount1.getOrDefault(edge, 0) + 1);
-                  }
-
-                  prevWord1 = normalizedWord;
-                }
-              }
-            }
-            scanner1.close();
-            graph = new Type();
-
-            // 添加顶点和边
-            for (Map.Entry<String, Integer> entry : wordCount1.entrySet()) {
-              String[] words = entry.getKey().split("-");
-              graph.addEdge(words[0], words[1], entry.getValue());
-            }
             if (graph == null) {
               System.out.println("请先执行 case 1 来创建图形！");
               break;
@@ -211,28 +178,50 @@ public class Main {
             System.out.println("执行时间: " + (duration4 / 1_000_000.0) + " 毫秒");
             break;
           case 5:
-            if (graph == null) {
-              System.out.println("请先执行 case 1 来创建图形！");
-              break;
+            File file1 = new File("text.txt");
+            Scanner scanner1 = new Scanner(file1, StandardCharsets.UTF_8.name());
+
+            StringBuilder processedText1 = new StringBuilder();
+            Map<String, Integer> wordCount1 = new HashMap<>();
+
+            String prevWord1 = null;
+
+            while (scanner1.hasNextLine()) {
+              String line = scanner1.nextLine();
+              String[] words = line.split("[^a-zA-Z]"); // 使用正则表达式分割单词
+
+              for (String word : words) {
+                if (!word.isEmpty()) {
+                  String normalizedWord = word.toLowerCase();
+                  processedText1.append(normalizedWord).append(" "); // 转换为小写并添加空格
+
+                  if (prevWord1 != null) {
+                    String edge = prevWord1 + "-" + normalizedWord;
+                    wordCount1.put(edge, wordCount1.getOrDefault(edge, 0) + 1);
+                  }
+
+                  prevWord1 = normalizedWord;
+                }
+              }
+            }
+            scanner1.close();
+            graph = new Type();
+
+            // 添加顶点和边
+            for (Map.Entry<String, Integer> entry : wordCount1.entrySet()) {
+              String[] words = entry.getKey().split("-");
+              graph.addEdge(words[0], words[1], entry.getValue());
             }
             System.out.println("请输入两个英文单词，以空格分隔：");
-            //Scanner scanInput2 = new Scanner(System.in);
-            Scanner scanInput2 = new Scanner(
-                new InputStreamReader(System.in, StandardCharsets.UTF_8));
-            String wordInput2 = scanInput2.nextLine();
+            String wordInput2 = scan.nextLine();
             String[] words2 = wordInput2.split(" ");
             if (words2.length != 2) {
               System.out.println("输入格式错误，请输入两个英文单词！");
-              break;
+              return;
             }
             String wwWord1 = words2[0].toLowerCase();
             String wwWord2 = words2[1].toLowerCase();
-            long startTime5 = System.nanoTime();
             String outcome = calcShortestPath(wwWord1, wwWord2);
-            // 记录结束时间
-            long endTime5 = System.nanoTime();
-            // 计算运行时间
-            long duration5 = endTime5 - startTime5;
 
             if (outcome == null) {
               System.out.println("有不属于该图的结点！");
@@ -241,8 +230,7 @@ public class Main {
             } else {
               System.out.println(outcome);
             }
-            System.out.println("执行时间: " + (duration5 / 1_000_000.0) + " 毫秒");
-            break;
+            return;
           case 6:
             if (graph == null) {
               System.out.println("请先执行 case 1 来创建图形！");
