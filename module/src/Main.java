@@ -32,7 +32,6 @@ public class Main {
 
   public static void main(String[] args) {
 
-
     try {
       while (true) {
         System.out.println("--------------------------------------------------");
@@ -50,7 +49,6 @@ public class Main {
         System.out.println("请输入所选择的序号：");
         if (!scan.hasNextInt()) {
           System.out.println("输入无效，请输入一个整数。");
-//          scan.nextLine();
           continue;
         }
         int n = scan.nextInt();
@@ -123,61 +121,7 @@ public class Main {
             long duration2 = endTime2 - startTime2;
             System.out.println("执行时间: " + (duration2 / 1_000_000.0) + " 毫秒");
             break;
-          case 3:{
-            if (graph == null) {
-              System.out.println("请先执行 case 1 来创建图形！");
-              break;
-            }
-            System.out.println("请输入两个英文单词，以空格分隔：");
-            scan.nextLine();
-            Scanner scanInput = new Scanner(
-                new InputStreamReader(System.in, StandardCharsets.UTF_8));
-            String wordInput = scanInput.nextLine();
-            String[] words = wordInput.split(" ");
-            if (words.length != 2) {
-              System.out.println("输入格式错误，请输入两个英文单词！");
-              break;
-            }
-            String word1 = words[0].toLowerCase();
-            String word2 = words[1].toLowerCase();
-            long startTime3 = System.nanoTime();
-            String bridgeWords = queryBridgeWords(word1, word2);
-            // 记录结束时间
-            long endTime3 = System.nanoTime();
-            // 计算运行时间
-            long duration3 = endTime3 - startTime3;
-            if (bridgeWords == null) {
-              System.out.println("No word1 or word2 in the graph!");
-            } else if (bridgeWords.length() == 0) {
-              System.out.println("No bridge words from " + word1 + " to " + word2 + "!");
-            } else {
-              System.out.print("The bridge words from " + word1 + " to " + word2 + " are: ");
-
-              System.out.println(bridgeWords);
-            }
-            System.out.println("执行时间: " + (duration3 / 1_000_000.0) + " 毫秒");
-            break;
-          }
-          case 4:
-            if (graph == null) {
-              System.out.println("请先执行 case 1 来创建图形！");
-              break;
-            }
-            System.out.println("请输入一行新的文本：");
-            Scanner newText = new Scanner(
-                new InputStreamReader(System.in, StandardCharsets.UTF_8));
-            String inputText = newText.nextLine();
-            long startTime4 = System.nanoTime();
-            String outputText = generateNewText(inputText);
-            // 记录结束时间
-            long endTime4 = System.nanoTime();
-            // 计算运行时间
-            long duration4 = endTime4 - startTime4;
-            System.out.println("添加桥接词后的文本为：");
-            System.out.println(outputText);
-            System.out.println("执行时间: " + (duration4 / 1_000_000.0) + " 毫秒");
-            break;
-          case 5:
+          case 3:
             File file1 = new File("text.txt");
             Scanner scanner1 = new Scanner(file1, StandardCharsets.UTF_8.name());
 
@@ -213,15 +157,66 @@ public class Main {
               graph.addEdge(words[0], words[1], entry.getValue());
             }
             System.out.println("请输入两个英文单词，以空格分隔：");
-            String wordInput2 = scan.nextLine();
-            String[] words2 = wordInput2.split(" ");
-            if (words2.length != 2) {
+            String wordInput = scan.nextLine();
+            String[] words = wordInput.split(" ");
+            if (words.length != 2) {
               System.out.println("输入格式错误，请输入两个英文单词！");
               return;
             }
+            String word1 = words[0].toLowerCase();
+            String word2 = words[1].toLowerCase();
+            String bridgeWords = queryBridgeWords(word1, word2);
+            if (bridgeWords == null) {
+              System.out.println("No word1 or word2 in the graph!");
+            } else if (bridgeWords.length() == 0) {
+              System.out.println("No bridge words from " + word1 + " to " + word2 + "!");
+            } else {
+              System.out.print("The bridge words from " + word1 + " to " + word2 + " are: ");
+              System.out.println(bridgeWords);
+            }
+            return;
+          case 4:
+            if (graph == null) {
+              System.out.println("请先执行 case 1 来创建图形！");
+              break;
+            }
+            System.out.println("请输入一行新的文本：");
+            Scanner newText = new Scanner(
+                new InputStreamReader(System.in, StandardCharsets.UTF_8));
+            String inputText = newText.nextLine();
+            long startTime4 = System.nanoTime();
+            String outputText = generateNewText(inputText);
+            // 记录结束时间
+            long endTime4 = System.nanoTime();
+            // 计算运行时间
+            long duration4 = endTime4 - startTime4;
+            System.out.println("添加桥接词后的文本为：");
+            System.out.println(outputText);
+            System.out.println("执行时间: " + (duration4 / 1_000_000.0) + " 毫秒");
+            break;
+          case 5:
+            if (graph == null) {
+              System.out.println("请先执行 case 1 来创建图形！");
+              break;
+            }
+            System.out.println("请输入两个英文单词，以空格分隔：");
+            //Scanner scanInput2 = new Scanner(System.in);
+            Scanner scanInput2 = new Scanner(
+                new InputStreamReader(System.in, StandardCharsets.UTF_8));
+            String wordInput2 = scanInput2.nextLine();
+            String[] words2 = wordInput2.split(" ");
+            if (words2.length != 2) {
+              System.out.println("输入格式错误，请输入两个英文单词！");
+              break;
+            }
             String wwWord1 = words2[0].toLowerCase();
             String wwWord2 = words2[1].toLowerCase();
+            long startTime5 = System.nanoTime();
             String outcome = calcShortestPath(wwWord1, wwWord2);
+            // 记录结束时间
+            long endTime5 = System.nanoTime();
+            // 计算运行时间
+            long duration5 = endTime5 - startTime5;
 
             if (outcome == null) {
               System.out.println("有不属于该图的结点！");
@@ -230,7 +225,8 @@ public class Main {
             } else {
               System.out.println(outcome);
             }
-            return;
+            System.out.println("执行时间: " + (duration5 / 1_000_000.0) + " 毫秒");
+            break;
           case 6:
             if (graph == null) {
               System.out.println("请先执行 case 1 来创建图形！");
@@ -320,7 +316,7 @@ public class Main {
    * 这是查询桥接词函数.
    */
 
-  public static String queryBridgeWords(String word1, String word2) {
+  public static String  queryBridgeWords(String word1, String word2) {
     List<String> bridgeWords = new ArrayList<>();
     if (!graph.getAdjacencyList().containsKey(word1)
         || !graph.getAdjacencyList().containsKey(word2)) {
@@ -583,7 +579,7 @@ public class Main {
       //                        System.out.println(strArray);
       // 将数组转换为 List<String>
       List<String> shortestPath = Arrays.asList(strArray);
-      //drawing(shortestPath, word2, word1);
+      drawing(shortestPath, word2, word1);
     }
 
     return s;
