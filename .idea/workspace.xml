@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="97d90ede-3f26-4028-88a6-f54d3c68758e" name="Changes" comment="" />
-    <list id="08d0fa3a-8c00-43b8-8df0-8973cef63cd7" name="Changes by XYX" comment="" />
+    <list default="true" id="97d90ede-3f26-4028-88a6-f54d3c68758e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/module/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAB1/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/LAB1/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/LAB1/classpath.index" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -59,7 +63,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="LAB1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="queryBridgeWordsTest.testCase1ThenCase3WithValidInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LAB1" />
       <option name="PACKAGE_NAME" value="" />
@@ -90,16 +101,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="queryBridgeWordsTest.testInvalidInputOneWord" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="LAB1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="queryBridgeWordsTest" />
-      <option name="METHOD_NAME" value="testInvalidInputOneWord" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="queryBridgeWordsTest.testInvalidInputThreeWords" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="LAB1" />
       <option name="PACKAGE_NAME" value="" />
@@ -112,11 +113,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.queryBridgeWordsTest.testCase5WithValidInput" />
         <item itemvalue="JUnit.queryBridgeWordsTest.testCase1ThenCase3WithValidInput" />
         <item itemvalue="JUnit.queryBridgeWordsTest.testInvalidInputFormat" />
         <item itemvalue="JUnit.queryBridgeWordsTest.testInvalidInputThreeWords" />
-        <item itemvalue="JUnit.queryBridgeWordsTest.testInvalidInputOneWord" />
       </list>
     </recent_temporary>
   </component>
@@ -130,11 +131,14 @@
       <updated>1718088955693</updated>
       <workItem from="1718088956808" duration="2189000" />
       <workItem from="1718156546507" duration="7419000" />
-      <workItem from="1718286151024" duration="20407000" />
+      <workItem from="1718286151024" duration="22768000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/LAB1$Main.ic" NAME="Main Coverage Results" MODIFIED="1718368041384" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>

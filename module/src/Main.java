@@ -161,7 +161,7 @@ public class Main {
             String[] words = wordInput.split(" ");
             if (words.length != 2) {
               System.out.println("输入格式错误，请输入两个英文单词！");
-              return;
+              break;
             }
             String word1 = words[0].toLowerCase();
             String word2 = words[1].toLowerCase();
@@ -174,7 +174,7 @@ public class Main {
               System.out.print("The bridge words from " + word1 + " to " + word2 + " are: ");
               System.out.println(bridgeWords);
             }
-            return;
+            break;
           case 4:
             if (graph == null) {
               System.out.println("请先执行 case 1 来创建图形！");
